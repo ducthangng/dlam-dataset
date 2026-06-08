@@ -1,0 +1,58 @@
+{
+  "name": "operations_forecasting_2026",
+  "task": "Multivariate hourly forecasting for anonymized operations units.",
+  "target_column": "target",
+  "target_description": "Predict the future hourly operational load index for each series_id. Higher values indicate more operational pressure in that unit.",
+  "frequency": "h",
+  "n_series": 96,
+  "n_steps": 4992,
+  "history_length": 168,
+  "forecast_horizon": 24,
+  "forecast_horizon_note": "Rollout block length. Submissions must still predict every row in the provided forecast_index_*.csv files.",
+  "validation_horizon": 336,
+  "test_horizon": 336,
+  "required_prediction_horizon": {
+    "validation": 336,
+    "test": 336
+  },
+  "metric": "wape",
+  "schema": {
+    "train": [
+      "series_id",
+      "timestamp",
+      "hour_sin",
+      "hour_cos",
+      "dow_sin",
+      "dow_cos",
+      "is_weekend",
+      "trend",
+      "workload_intensity",
+      "demand_forecast",
+      "staffing_forecast",
+      "upstream_quality_forecast",
+      "promotion_intensity",
+      "shock_risk",
+      "maintenance_known",
+      "unit_reliability_forecast",
+      "queue_pressure_forecast",
+      "network_pressure_forecast",
+      "event_load_forecast",
+      "service_irregularity_risk_forecast",
+      "throughput_disruption_risk_forecast",
+      "nominal_capacity",
+      "zone_sin",
+      "zone_cos",
+      "target"
+    ],
+    "prediction": [
+      "series_id",
+      "timestamp",
+      "prediction"
+    ],
+    "labels": [
+      "series_id",
+      "timestamp",
+      "target"
+    ]
+  }
+}
