@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Error><Code>TemporaryRedirect</Code><Message>Please re-send this request to the specified temporary endpoint. Continue to use the original request endpoint for future requests.</Message><Endpoint>aws-ducthangng-dataset.s3-ap-southeast-1.amazonaws.com</Endpoint><Bucket>aws-ducthangng-dataset</Bucket><RequestId>MW3ATCT5QMBV606Y</RequestId><HostId>eRObpkjvP3kNU1oP3tGZPmJaVUX+KaU7OtVJ1m/46DEW6iE4rhaZfKToSKTUWhgdM4pscbqjcdw=</HostId></Error>
